@@ -1,0 +1,18 @@
+i ran simulated annealing for 1000 times with the same random starting point, a = 1.0 b = 0.99 T = 1000 and I got 1 percent correct answers. so if the temperature is very high and decreasing very slowly, it's not too good.
+Then, I decreased the temperature to 100 and the correct answers increased to 2%.
+When decreasing T to 10, the number increased to 3%
+
+
+Df/t
+high temperature => result very close to 1
+low temperature => result very close to 0
+
+-Df/t
+high temperature => result very close to 1
+low temperature => huge number 
+
+correct parameters
+        computed_answer = sa(0.35, 0.99, 10)
+stopping criteria
+	T > 2e - 300 - temperature is suitably low - smallest i could get that doesn't cause an overflow for the exp function
+initial solution - random number 
